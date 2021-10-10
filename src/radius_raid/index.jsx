@@ -18,8 +18,8 @@ const RadiusRaid = () => {
         <>
 
             <div style={{ backgroundColor: "black", height: "100vh" }}>
-                <span id="score" style={{ color: "black" }}></span>
-                <span id="timing" style={{ color: "black" }}></span>
+                <span id="score" style={{ color: "black", display: "none" }}></span>
+                <span id="timing" style={{ color: "black", display: "none" }}></span>
 
                 <div id="wrap">
 

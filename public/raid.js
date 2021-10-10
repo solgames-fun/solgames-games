@@ -2220,8 +2220,8 @@ $.Rc = function () {
   $.bc = $.xa.getContext("2d");
   $.a = $.Bb.getContext("2d");
   $.ya = $.ac.getContext("2d");
-  $.c = $.Bb.width = $.ac.width = window.innerWidth;
-  $.ch = $.Bb.height = $.ac.height = window.innerHeight;
+  $.c = $.Bb.width = $.ac.width = window.innerWidth * 0.8;
+  $.ch = $.Bb.height = $.ac.height = window.innerHeight * 0.8;
   $.Ob.style.width = $.Hc.style.width = $.c + "px";
   $.Ob.style.height = $.Hc.style.height = $.ch + "px";
   $.Ob.style.marginLeft = -$.c / 2 - 10 + "px";
