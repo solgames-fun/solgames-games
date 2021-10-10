@@ -2,12 +2,16 @@ import "./styles.scss";
 import React, { useEffect, useState, useMemo } from "react";
 const BunnyRunner = () => {
     const [time, setTime] = useState(0);
+    const [visible, setVisible] = useState(false);
     var timing = React.useRef();
     const attrObserver = useMemo(() => new MutationObserver((mutations) => {
         mutations.forEach(mu => {
             if (mu.type !== "attributes" && mu.attributeName !== "class") return;
-            if (!document.getElementById("gameoverInstructions").classList.contains("show"))
+            if (!document.getElementById("gameoverInstructions").classList.contains("show")) {
                 setTime(0);
+                setVisible(false);
+            }
+
         });
     }), []);
 
@@ -15,6 +19,11 @@ const BunnyRunner = () => {
         const interval = setInterval(() => {
             if (!document.getElementById("gameoverInstructions").classList.contains("show"))
                 setTime(time + 1);
+
+
+            if (document.getElementById("gameoverInstructions").classList.contains("show"))
+                setVisible(true);
+
             const rCounter = document.getElementById("gameoverInstructions");
             attrObserver.observe(rCounter, { attributes: true });
             timing.current.innerText = time;
@@ -42,9 +51,7 @@ const BunnyRunner = () => {
 
             <div id="gameoverInstructions">
                 Game Over<br />
-                <button onClick={withdrawEarnings} className="withdraw">
-                    Withdraw tokens
-                </button>
+
             </div>
             <div id="dist">
                 <div class="label">distance</div>
@@ -53,9 +60,16 @@ const BunnyRunner = () => {
             </div>
 
 
+            <div style={{ position: "absolute", marginTop: "60vh" }}>
+                {visible && <button onClick={withdrawEarnings} className="withdraw">
+                    Withdraw tokens
+                </button>}
+            </div>
+            <div style={{ position: "absolute", marginTop: "100vh" }}>
 
+                <div id="instructions">Press Space to Jump<span className="lightInstructions"> — Grab the carrots / avoid the hedgehogs</span></div>
 
-            <div id="instructions">Press Space to Jump<span className="lightInstructions"> — Grab the carrots / avoid the hedgehogs</span></div>
+            </div>
 
 
 

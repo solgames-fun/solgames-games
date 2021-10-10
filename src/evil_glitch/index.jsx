@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useMemo, useState } from 'react';
-import style from "./evil.scoped.scss";
+import "./evil.scoped.scss";
 const EvilGlitch = () => {
     const [score, setScore] = useState()
     const textObserver = useMemo(() => new MutationObserver((mutations) => {
