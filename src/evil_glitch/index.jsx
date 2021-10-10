@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useMemo, useState } from 'react';
-import "./style.scss";
+import style from "./evil.scoped.scss";
 const EvilGlitch = () => {
     const [score, setScore] = useState()
     const textObserver = useMemo(() => new MutationObserver((mutations) => {
@@ -29,7 +29,8 @@ const EvilGlitch = () => {
     }, [textObserver]);
     return (
         <>
-            <div id="d"><canvas id="c"></canvas><canvas id="g" moz-opaque></canvas></div>
+            <div id="d"><canvas id="c"></canvas>
+                <canvas id="g" moz-opaque></canvas></div>
             <span id="score" style={{ color: "black", display: "none" }}></span>
             {score && <button
                 onClick={withdrawEarnings}

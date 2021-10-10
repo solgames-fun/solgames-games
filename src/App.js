@@ -29,14 +29,14 @@ function App() {
             </center>
           </div>
         </Link>
-        <Link to="/evil-glitch">
+        <a href="/evil-glitch">
           <div className="card">
             <h2>Evil Glitch</h2>
             <center>
               <img src="https://i.imgur.com/pFQQiyw.png" alt="" />
             </center>
           </div>
-        </Link>
+        </a>
       </div>
     </div>
   );
