@@ -3,16 +3,24 @@ import React, { useEffect, useState } from "react";
 const BunnyRunner = () => {
     const [time, setTime] = useState(0);
     var timing = React.useRef();
-
+    const attrObserver = new MutationObserver((mutations) => {
+        mutations.forEach(mu => {
+            if (mu.type !== "attributes" && mu.attributeName !== "class") return;
+            if (!document.getElementById("gameoverInstructions").classList.contains("show"))
+                setTime(0);
+        });
+    });
 
     useEffect(() => {
         const interval = setInterval(() => {
             if (!document.getElementById("gameoverInstructions").classList.contains("show"))
                 setTime(time + 1);
+            const rCounter = document.getElementById("gameoverInstructions");
+            attrObserver.observe(rCounter, { attributes: true });
             timing.current.innerText = time;
         }, 1000);
         return () => clearInterval(interval);
-    }, [time]);
+    }, [time, attrObserver]);
     useEffect(() => {
         const script = document.createElement("script");
         script.src = "/bunny.js";
