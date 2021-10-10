@@ -20,7 +20,7 @@ const BunnyRunner = () => {
             timing.current.innerText = time;
         }, 1000);
         return () => clearInterval(interval);
-    }, [time, attrObserver]);
+    }, [time]);
     useEffect(() => {
         const script = document.createElement("script");
         script.src = "/bunny.js";
