@@ -7,6 +7,7 @@ import BunnyRunner from "./bunny_runner";
 import StackIt from "./stack_it";
 import RadiusRaid from "./radius_raid";
 import App from "./App";
+import EvilGlitch from "./evil_glitch";
 ReactDOM.render(
   <Router>
     <div>
@@ -19,6 +20,9 @@ ReactDOM.render(
         </Route>
         <Route path="/raid">
           <RadiusRaid />
+        </Route>
+        <Route path="/evil-glitch">
+          <EvilGlitch />
         </Route>
         <Route path="/">
           <App />
