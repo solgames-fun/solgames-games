@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-expressions */
 var $ = {};
 function J() {

@@ -4,8 +4,9 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import BunnyRunner from "./bunny_runner";
-
+import StackIt from "./stack_it";
 import RadiusRaid from "./radius_raid";
+import App from "./App";
 ReactDOM.render(
   <Router>
     <div>
@@ -13,9 +14,14 @@ ReactDOM.render(
         <Route path="/bunny">
           <BunnyRunner />
         </Route>
-
+        <Route path="/stack-it">
+          <StackIt />
+        </Route>
         <Route path="/raid">
           <RadiusRaid />
+        </Route>
+        <Route path="/">
+          <App />
         </Route>
       </Switch>
     </div>

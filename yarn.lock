@@ -8377,6 +8377,11 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
+physijs-webpack@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/physijs-webpack/-/physijs-webpack-0.1.4.tgz#3ae862173452af36ef5d4fa6ed55159ce5fb4317"
+  integrity sha512-730sO77/8/CoNGgS9I6icPsrbSptM1L6fqN9VMUHfaYUKiq1BvRAUwMkyTvjfb42xmOCis7i5sv4sbyEnmpFIA==
+
 picomatch@^2.0.4, picomatch@^2.0.5, picomatch@^2.2.1, picomatch@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz#21f333e9b6b8eaff02468f5146ea406d345f4dad"

@@ -13,7 +13,7 @@ const RadiusRaid = () => {
         let time = Number(timing[0]) * 60 + Number(timing[1]);
         alert(`Achieved ${score} points in ${time} seconds!`)
     }
-    //TODO: add invisible fields for getting values and game status
+
     return (
         <>
 

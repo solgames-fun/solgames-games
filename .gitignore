@@ -1,3 +1,7 @@
+# Removed for now...
+src/fast_burglars/
+src/hex_driver/
+
 # Logs
 logs
 *.log

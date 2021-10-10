@@ -55,7 +55,7 @@ const BunnyRunner = () => {
 
 
 
-            <div id="instructions">Press Space to Jump<span class="lightInstructions"> — Grab the carrots / avoid the hedgehogs</span></div>
+            <div id="instructions">Press Space to Jump<span className="lightInstructions"> — Grab the carrots / avoid the hedgehogs</span></div>
 
 
 
