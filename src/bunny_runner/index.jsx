@@ -1,15 +1,15 @@
 import "./styles.scss";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 const BunnyRunner = () => {
     const [time, setTime] = useState(0);
     var timing = React.useRef();
-    const attrObserver = new MutationObserver((mutations) => {
+    const attrObserver = useMemo(() => new MutationObserver((mutations) => {
         mutations.forEach(mu => {
             if (mu.type !== "attributes" && mu.attributeName !== "class") return;
             if (!document.getElementById("gameoverInstructions").classList.contains("show"))
                 setTime(0);
         });
-    });
+    }), []);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -20,7 +20,7 @@ const BunnyRunner = () => {
             timing.current.innerText = time;
         }, 1000);
         return () => clearInterval(interval);
-    }, [time]);
+    }, [time, attrObserver]);
     useEffect(() => {
         const script = document.createElement("script");
         script.src = "/bunny.js";
