@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./App.scss";
+import "./App.scoped.scss";
 
 function App() {
   return (
@@ -34,6 +34,38 @@ function App() {
             <h2>Evil Glitch</h2>
             <center>
               <img src="https://i.imgur.com/pFQQiyw.png" alt="" />
+            </center>
+          </div>
+        </a>
+        <a href="/pronto">
+          <div className="card">
+            <h2>Pronto</h2>
+            <center>
+              <img src="https://i.imgur.com/oGPirXI.png" alt="" />
+            </center>
+          </div>
+        </a>
+        <a href="/matrix">
+          <div className="card">
+            <h2>Matrix</h2>
+            <center>
+              <img src="https://i.imgur.com/EKinlyP.png" alt="" />
+            </center>
+          </div>
+        </a>
+        <a href="/flappy-box">
+          <div className="card">
+            <h2>Flappy Box</h2>
+            <center>
+              <img src="https://i.imgur.com/xwwwaej.png" alt="" />
+            </center>
+          </div>
+        </a>
+        <a href="/boxes">
+          <div className="card">
+            <h2>Falling Boxes</h2>
+            <center>
+              <img src="https://i.imgur.com/8XRxOS8.png" alt="" />
             </center>
           </div>
         </a>

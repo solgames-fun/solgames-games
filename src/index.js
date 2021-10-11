@@ -8,6 +8,11 @@ import StackIt from "./stack_it";
 import RadiusRaid from "./radius_raid";
 import App from "./App";
 import EvilGlitch from "./evil_glitch";
+import Pronto from "./pronto";
+import Matrix from "./matrix";
+import Boxes from "./boxes";
+import FlappyBox from "./flappy_box";
+
 ReactDOM.render(
   <Router>
     <div>
@@ -23,6 +28,18 @@ ReactDOM.render(
         </Route>
         <Route path="/evil-glitch">
           <EvilGlitch />
+        </Route>
+        <Route path="/pronto">
+          <Pronto />
+        </Route>
+        <Route path="/matrix">
+          <Matrix />
+        </Route>
+        <Route path="/boxes">
+          <Boxes />
+        </Route>
+        <Route path="/flappy-box">
+          <FlappyBox />
         </Route>
         <Route path="/">
           <App />

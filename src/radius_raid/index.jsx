@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import "./style.scss";
+import "./style.scoped.scss";
 const RadiusRaid = () => {
     useEffect(() => {
         const script = document.createElement("script");
@@ -35,7 +35,13 @@ const RadiusRaid = () => {
 
                 </div>
 
-                <button id="claim" onClick={withdrawEarnings}>CLAIM TOKENS</button>
+                <button id="claim" style={{
+                    position: "absolute",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                    marginTop: "80vh",
+                    marginBottom: "1px"
+                }} onClick={withdrawEarnings}>CLAIM TOKENS</button>
 
             </div>
         </>
