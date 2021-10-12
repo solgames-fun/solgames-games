@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo } from "react";
 import "./style.scoped.scss";
-const FlappyBox = () => {
-
+const FlappyBird = () => {
     const [score, setScore] = useState()
     const [time, setTime] = useState(0);
     const scoreObserver = useMemo(() => new MutationObserver((mutations) => {
@@ -21,16 +20,15 @@ const FlappyBox = () => {
         alert(`Achieved ${score} points in ${time} seconds!`)
     }
     useEffect(() => {
-        const flappyBird = document.createElement("script");
-        flappyBird.src = "/flappybox.js";
-        flappyBird.async = true;
-        document.body.appendChild(flappyBird);
+        const bird = document.createElement("script");
+        bird.src = "/flappy_bird.js"
+        bird.async = true;
+
+        document.body.appendChild(bird);
 
         let scoreVal = document.getElementById("score");
         scoreObserver.observe(scoreVal, { attributes: true });
-
-
-    }, [scoreObserver]);
+    });
     useEffect(() => {
         const interval = setInterval(() => {
             if (!document.getElementById("score").classList.contains("end"))
@@ -40,19 +38,13 @@ const FlappyBox = () => {
     }, [time]);
     return (
         <div className="bg">
-            <canvas id="c"></canvas>
-            <p id="error">Please don't use landscape mode</p>
-            <span id="score" style={{ color: "black", display: "none" }}></span>
 
-            {score && <button onClick={withdrawEarnings} style={{
-                position: "absolute",
-                marginLeft: "auto",
-                marginRight: "auto",
-                marginTop: "auto",
-                marginBottom: "30px"
-            }}>
-                Take Tokens</button>}
+            <canvas id="canvas" width="276" height="414"></canvas>
+            <span id="score" style={{ color: "black", display: "none" }}></span>
+            {score && <button
+                onClick={withdrawEarnings}
+                style={{ position: "absolute", marginLeft: "auto", marginRight: "auto", marginTop: "auto", marginBottom: "30px" }}>Take Tokens</button>}
         </div>
     )
 }
-export default FlappyBox;
+export default FlappyBird;

@@ -69,6 +69,22 @@ function App() {
             </center>
           </div>
         </a>
+        <a href="/flappy-bird">
+          <div className="card">
+            <h2>Flappy Bird</h2>
+            <center>
+              <img src="https://i.imgur.com/QaEZ3L3.png" alt="" />
+            </center>
+          </div>
+        </a>
+        <a href="/air-fury">
+          <div className="card">
+            <h2>Air Fury</h2>
+            <center>
+              <img src="https://i.imgur.com/v4CACfp.png" alt="" />
+            </center>
+          </div>
+        </a>
       </div>
     </div>
   );
