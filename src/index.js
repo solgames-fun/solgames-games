@@ -15,6 +15,7 @@ import FlappyBox from "./flappy_box";
 import FlappyBird from "./flappy_bird";
 import AirFury from "./air_fury";
 import Minesweeper from "./minesweeper";
+import SwagShot from "./swagshot";
 ReactDOM.render(
   <Router>
     <div>
@@ -51,6 +52,9 @@ ReactDOM.render(
         </Route>
         <Route path="/minesweeper">
           <Minesweeper />
+        </Route>
+        <Route path="/swagshot">
+          <SwagShot />
         </Route>
         <Route path="/">
           <App />
