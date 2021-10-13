@@ -85,6 +85,14 @@ function App() {
             </center>
           </div>
         </a>
+        <a href="/minesweeper">
+          <div className="card">
+            <h2>Minesweeper</h2>
+            <center>
+              <img src="https://i.imgur.com/qjjB0ww.png" alt="" />
+            </center>
+          </div>
+        </a>
       </div>
     </div>
   );
