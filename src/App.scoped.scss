@@ -1,0 +1,39 @@
+.app {
+  background-image: url("https://wallpapercave.com/wp/wp7216449.jpg");
+  background-position: center;
+  height: 100vh;
+  background-size: cover;
+  overflow-y: auto;
+  background-repeat: no-repeat;
+}
+.card {
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 6px;
+  min-height: 300px;
+  font-size: 13px;
+  padding: 20px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 10px;
+}
+img {
+  max-width: 200px;
+  max-height: 230px;
+}
+
+h2 {
+  font-size: 28px;
+  text-align: center;
+}
+img {
+  height: 200px;
+  border-radius: 12px;
+}
